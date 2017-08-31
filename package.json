@@ -1,0 +1,18 @@
+{
+  "name": "iotapp",
+  "version": "1.0.0",
+  "description": "物联网",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack --config build/webpack.config.js",
+    "start": "webpack --config build/webpack.config.js && webpack-dev-server --open  --config build/webpack.config.js"
+  },
+  "author": "hackywit",
+  "license": "ISC",
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
