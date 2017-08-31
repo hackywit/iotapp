@@ -18,6 +18,22 @@ module.exports = {
         inline: true,
         port: 5200
     },
+    module: {
+        rules: [
+            {
+                test: /(\.jsx|\.js)$/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            "es2015", "react"
+                        ]
+                    }
+                },
+                exclude: /node_modules/
+            }
+        ]
+    },
     plugins: [
         new webpack.BannerPlugin('版权所有，翻版必究'),
         new HtmlWebpackPlugin({
