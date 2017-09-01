@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack --config build/webpack.config.js",
-    "start": "webpack --config build/webpack.config.js && webpack-dev-server --open  --config build/webpack.config.js"
+    "start": "webpack --config build/webpack.config.js && webpack-dev-server --open  --config build/webpack.config.js",
+    "test": "set NODE_ENV=production && mocha --compilers js:babel-core/register --require ignore-styles"
   },
   "author": "hackywit",
   "license": "ISC",
@@ -15,9 +16,12 @@
     "babel-plugin-import": "^1.4.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
+    "ignore-styles": "^5.0.1",
+    "mocha": "^3.5.0",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
