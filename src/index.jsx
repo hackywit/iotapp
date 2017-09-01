@@ -3,5 +3,3 @@
  */
 import React from 'react';
 import {render} from 'react-dom';
-import Loader from './components/loader.jsx';
-render(<Loader />, document.getElementById('root'));

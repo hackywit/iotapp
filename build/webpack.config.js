@@ -25,7 +25,7 @@ module.exports = {
                 use: {
                     loader: "babel-loader"
                 },
-                exclude: /dist/
+                exclude: /node_modules/
             },
             {
                 test: /\.css$/,
@@ -52,5 +52,8 @@ module.exports = {
             filename: './index.html'
         }),
         new ExtractTextPlugin("style.css")
-    ]
+    ],
+    resolve:{
+        extensions:['.js','.jsx','.json']
+    }
 };
