@@ -29,13 +29,18 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: "style-loader"
-                    }, {
-                        loader: "css-loader"
-                    }
-                ]
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader"
+                })
+            },
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    //resolve-url-loader may be chained before sass-loader if necessary
+                    use: ['css-loader', 'sass-loader']
+                })
             },
             {
                 test: /\.ts$/,
@@ -53,7 +58,7 @@ module.exports = {
         }),
         new ExtractTextPlugin("style.css")
     ],
-    resolve:{
-        extensions:['.js','.jsx','.json']
+    resolve: {
+        extensions: ['.js', '.jsx', '.json']
     }
 };

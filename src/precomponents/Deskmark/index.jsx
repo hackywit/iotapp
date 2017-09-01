@@ -1,6 +1,8 @@
 import React from 'react';
 import List from '../List';
 
+import './style.scss';
+
 export default class App extends React.Component {
     render() {
         const items = [
@@ -18,7 +20,7 @@ export default class App extends React.Component {
             }
         ];
         return (
-            <section>
+            <section className="deskmark-component">
                 <div>
                     <div>
                         <List items={items}/>
